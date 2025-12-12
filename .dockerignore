@@ -1,0 +1,9 @@
+target/
+.git/
+.gitignore
+*.md
+.metadata/
+Servers/
+.settings/
+.classpath
+.project
