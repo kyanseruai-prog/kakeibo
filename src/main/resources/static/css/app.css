@@ -1,0 +1,58 @@
+/* 家計簿アプリ カスタムCSS */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* ダッシュボードカード */
+.card.bg-success,
+.card.bg-danger,
+.card.bg-primary,
+.card.bg-warning {
+    transition: transform 0.2s;
+}
+
+.card.bg-success:hover,
+.card.bg-danger:hover,
+.card.bg-primary:hover,
+.card.bg-warning:hover {
+    transform: translateY(-2px);
+}
+
+/* テーブル */
+.table-hover tbody tr:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* ボタン */
+.btn {
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/* アラート */
+.alert {
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: kakeibo-app
+    env: java
+    plan: free
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/kakeibo-1.0.0.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
+      - key: DATABASE_URL
+        fromDatabase:
+          name: kakeibo-db
+          property: connectionString
+      - key: COOKIE_SECURE
+        value: true
+
+databases:
+  - name: kakeibo-db
+    databaseName: kakeibo_db
+    user: kakeibo_user
+    plan: free
