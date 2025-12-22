@@ -6,10 +6,26 @@ services:
     dockerfilePath: ./Dockerfile
     buildCommand: ""
     envVars:
-      - key: DATABASE_URL
+      - key: DB_HOST
         fromDatabase:
           name: kakeibo-db
-          property: connectionString
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: kakeibo-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: kakeibo-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: kakeibo-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: kakeibo-db
+          property: password
       - key: COOKIE_SECURE
         value: true
 
